@@ -6,4 +6,8 @@
     <select id="findById" parameterType="int" resultType="items">
         select * from items where id = #{id}
     </select>
+
+    <select id="save" parameterType="int" resultType="items">
+        INSERT into items VALUES (id,name,price,pic,createtime,detail)
+    </select>
 </mapper>

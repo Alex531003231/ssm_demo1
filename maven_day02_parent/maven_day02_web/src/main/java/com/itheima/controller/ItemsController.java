@@ -20,4 +20,10 @@ public class ItemsController {
         model.addAttribute("item", items);
         return "itemDetail";
     }
+    @RequestMapping("/save")
+    public String save(Items items){
+        itemsService.save(items);
+        return "save";
+    }
+
 }

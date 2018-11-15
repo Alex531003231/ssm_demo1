@@ -4,4 +4,7 @@ import com.itheima.domain.Items;
 
 public interface ItemsService {
     public Items findById(Integer id);
+
+
+    void save(Items items);
 }

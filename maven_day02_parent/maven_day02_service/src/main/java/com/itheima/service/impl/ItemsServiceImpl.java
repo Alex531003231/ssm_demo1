@@ -15,4 +15,11 @@ public class ItemsServiceImpl implements ItemsService {
     public Items findById(Integer id) {
         return itemsDao.findById(id);
     }
+
+    @Override
+    public void save(Items items) {
+        System.out.println("service调用到保存");
+        System.out.println("dao操作数据库进行保存");
+        itemsDao.save(items);
+    }
 }
