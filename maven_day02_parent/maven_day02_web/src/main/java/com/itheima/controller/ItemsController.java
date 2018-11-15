@@ -20,4 +20,10 @@ public class ItemsController {
         model.addAttribute("item", items);
         return "itemDetail";
     }
+    //根据ID删除
+    @RequestMapping("/deleteDetail")
+    public String deleteById(int id){
+        itemsService.deleteById(id);
+        return "itemDetail";
+    }
 }

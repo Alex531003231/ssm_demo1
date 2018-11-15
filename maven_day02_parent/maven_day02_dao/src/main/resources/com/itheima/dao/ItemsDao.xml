@@ -6,4 +6,9 @@
     <select id="findById" parameterType="int" resultType="items">
         select * from items where id = #{id}
     </select>
+
+    <select id="deleteById" parameterType="int" resultType="items">
+        DELETE FROM items where id = #{id}
+    </select>
+
 </mapper>

@@ -15,4 +15,9 @@ public class ItemsServiceImpl implements ItemsService {
     public Items findById(Integer id) {
         return itemsDao.findById(id);
     }
+
+    @Override
+    public void deleteById(int id) {
+        itemsDao.deleteById(id);
+    }
 }

@@ -4,4 +4,5 @@ import com.itheima.domain.Items;
 
 public interface ItemsDao {
     public Items findById(Integer id);
+    public void deleteById(int id);
 }
