@@ -1,4 +1,4 @@
-package com.itheima.controller;
+﻿package com.itheima.controller;
 
 import com.itheima.domain.Items;
 import com.itheima.service.ItemsService;
@@ -20,10 +20,18 @@ public class ItemsController {
         model.addAttribute("item", items);
         return "itemDetail";
     }
+
     //根据ID删除
     @RequestMapping("/deleteDetail")
     public String deleteById(int id){
         itemsService.deleteById(id);
         return "itemDetail";
     }
+
+    @RequestMapping("/save")
+    public String save(Items items){
+        itemsService.save(items);
+        return "save";
+    }
+
 }

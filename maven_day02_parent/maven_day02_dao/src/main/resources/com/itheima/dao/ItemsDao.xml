@@ -7,8 +7,14 @@
         select * from items where id = #{id}
     </select>
 
+
     <select id="deleteById" parameterType="int" resultType="items">
         DELETE FROM items where id = #{id}
+    </select>
+
+
+    <select id="save" parameterType="int" resultType="items">
+        INSERT into items VALUES (id,name,price,pic,createtime,detail)
     </select>
 
 </mapper>

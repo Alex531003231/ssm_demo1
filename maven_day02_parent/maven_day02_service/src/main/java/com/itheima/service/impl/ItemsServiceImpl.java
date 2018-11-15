@@ -17,7 +17,14 @@ public class ItemsServiceImpl implements ItemsService {
     }
 
     @Override
+
     public void deleteById(int id) {
         itemsDao.deleteById(id);
+    }
+
+    public void save(Items items) {
+        System.out.println("service调用到保存");
+        System.out.println("dao操作数据库进行保存");
+        itemsDao.save(items);
     }
 }
